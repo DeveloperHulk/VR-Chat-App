@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000');
+const socket = io('http://localhost:8000'); //this is for connecting the nodeserver
 
 //get DOM Elements in respective JS Variables
 const form = document.getElementById('send-container');
@@ -22,7 +22,7 @@ const append = (message,position)=>{
 
 
 //Ask new user for her/his name and let a server know
-// const name = prompt("Enter your name to join");
+const name = prompt("Enter your name to join");
 socket.emit('new-user-joined',name)
 
 //let the new user joins, receive his/her name from the server
